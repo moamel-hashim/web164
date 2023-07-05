@@ -1,0 +1,29 @@
+.custom-col {
+  width: 37%;
+}
+
+.dark-color {
+  background-color: #6969699f;
+}
+
+.light-orange {
+  background-color: #FC9500;
+}
+
+.light-dark {
+  background-color: #A6A6A6;
+}
+
+.border-none {
+  border: none;
+}
+
+.background-none {
+  background: none;
+}
+.display-value {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap: break-word;
+}
