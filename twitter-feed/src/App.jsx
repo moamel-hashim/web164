@@ -22,7 +22,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.limit)
     return (
       <div className="component">
         <form onSubmit={this.handleSubmit}>
