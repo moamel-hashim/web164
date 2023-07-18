@@ -1,6 +1,13 @@
 import React from 'react'
 import './App.css'
 
+const rowStyles = {
+  greenSquare: {
+    color: 'green',
+    fontWeight: 'bold'
+  },
+};
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -16,9 +23,16 @@ export default class App extends React.Component {
     ));
 
     const multiplicationTable = this.state.firstRow.map((rowMultiplier) => {
-      const rowValues = this.state.secondRow.map((columnMultiplier) => (
-        <td key={columnMultiplier}>{rowMultiplier * columnMultiplier}</td>
-      ));
+      const rowValues = this.state.secondRow.map((columnMultiplier) => {
+        const product = rowMultiplier * columnMultiplier;
+        const isSquare = rowMultiplier === columnMultiplier;
+
+        return (
+          <td key={columnMultiplier} style={isSquare ? rowStyles.greenSquare : {}}>
+            {product}
+          </td>
+        );
+      });
       return (
         <tr key={rowMultiplier} className='border-bottom'>
           <th>{rowMultiplier}</th>
